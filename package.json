@@ -1,0 +1,12 @@
+{
+  "name": "lanningsmith",
+  "version": "0.1.0",
+  "devDependencies": {
+    "grunt": "^0.4.4",
+    "requirejs": "^2.1.11"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://codecuts.git.beanstalkapp.com/lanningsmith-com.git"
+  }
+}

@@ -1,0 +1,110 @@
+* {
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;         /* Opera/IE 8+ */
+}
+
+.container {
+	background: $siteBackground;
+}
+
+a {
+	color: $defaultFontColor;
+}
+
+a:hover {
+	color: $defaultFontColor;
+	text-decoration: none;
+}
+
+nav {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+//	min-width: $minViewportWidth;
+//	min-height: $minViewportHeight;
+	top: 0;
+	left: 0;
+	text-align: center;
+}
+
+.ctrl {
+	display: block;
+	position: absolute;
+	cursor: pointer;
+	z-index: $bottomLayer;
+}
+
+.shutter {
+	top: 12px;
+	width: 40px;
+	height: 30px;
+	z-index: $middleLayer;
+
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	  /* for some reason these three needed to center this item */
+}
+
+.main-nav .shutter {
+	background: inline-image('circle.png') no-repeat;
+	background-position: center;
+}
+
+.thumbmenu-nav .shutter {
+	background: inline-image('x.png') no-repeat;	
+	background-position: center;
+}
+
+
+.up,
+.down {
+	width: 100%;
+	height: 23%;
+	text-align: center;
+	background: inline-image('arrow_updown.png') no-repeat;
+}
+
+.up {
+	top: 0;
+	background-position: center top;
+}
+
+.down {
+	bottom: 0;
+	background-position: center bottom;
+}
+
+.right,
+.left {
+	width: 50%;
+	height: 100%;
+//	background: inline-image('arrow_rightleft.png') no-repeat;
+
+	img{
+		position: fixed;
+	}
+}
+
+.right {
+
+	right: 0;
+	img { 
+//		right: 13%;
+		right: 3%;
+	}
+//	background-position: right center;
+}
+
+.left {
+	left: 0;
+	img {
+		//float: right;
+//		left: 13%;
+		left: 3%;
+	}
+//	background-position: left center;
+}
+
+

@@ -1,0 +1,1348 @@
+/*
+style.scss - Sass Styles for lanningsmith.com
+*/
+/*==================================================================================*/
+/*    Setup
+/*==================================================================================*/
+/* Dependencies */
+/*==================================================================================*/
+/*    Variables
+/*==================================================================================*/
+/* fonts */
+/* 22px */
+/* nav images */
+/* layering */
+/* colors */
+/* sizing */
+/*!
+ * Bootstrap v2.3.2
+ *
+ * Copyright 2013 Twitter, Inc
+ * Licensed under the Apache License v2.0
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Designed and built with all the love in the world @twitter by @mdo and @fat.
+ */
+/* line 10, sass/_our-bootstrap.scss */
+.clearfix {
+  *zoom: 1;
+}
+
+/* line 14, sass/_our-bootstrap.scss */
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+
+/* line 19, sass/_our-bootstrap.scss */
+.clearfix:after {
+  clear: both;
+}
+
+/* line 22, sass/_our-bootstrap.scss */
+.hide-text {
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+
+/* line 29, sass/_our-bootstrap.scss */
+.input-block-level {
+  display: block;
+  width: 100%;
+  min-height: 30px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 46, sass/_our-bootstrap.scss */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section {
+  display: block;
+}
+
+/* line 51, sass/_our-bootstrap.scss */
+audio,
+canvas,
+video {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+
+/* line 56, sass/_our-bootstrap.scss */
+audio:not([controls]) {
+  display: none;
+}
+
+/* line 59, sass/_our-bootstrap.scss */
+html {
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+/* line 64, sass/_our-bootstrap.scss */
+a:focus {
+  outline: thin dotted #333;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+
+/* line 70, sass/_our-bootstrap.scss */
+a:hover,
+a:active {
+  outline: 0;
+}
+
+/* line 74, sass/_our-bootstrap.scss */
+sub,
+sup {
+  position: relative;
+  font-size: 75%;
+  line-height: 0;
+  vertical-align: baseline;
+}
+
+/* line 80, sass/_our-bootstrap.scss */
+sup {
+  top: -0.5em;
+}
+
+/* line 83, sass/_our-bootstrap.scss */
+sub {
+  bottom: -0.25em;
+}
+
+/* line 86, sass/_our-bootstrap.scss */
+img {
+  /* Responsive images (ensure images don't scale beyond their parents) */
+  max-width: 100%;
+  /* Part 1: Set a maxium relative to the parent */
+  width: auto\9;
+  /* IE7-8 need help adjusting responsive images */
+  height: auto;
+  /* Part 2: Scale the height according to the width, otherwise you get stretching */
+  vertical-align: middle;
+  border: 0;
+  -ms-interpolation-mode: bicubic;
+}
+
+/* line 103, sass/_our-bootstrap.scss */
+#map_canvas img,
+.google-maps img {
+  max-width: none;
+}
+
+/* line 109, sass/_our-bootstrap.scss */
+button,
+input,
+select,
+textarea {
+  margin: 0;
+  font-size: 100%;
+  vertical-align: middle;
+}
+
+/* line 115, sass/_our-bootstrap.scss */
+button,
+input {
+  *overflow: visible;
+  line-height: normal;
+}
+
+/* line 120, sass/_our-bootstrap.scss */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+/* line 127, sass/_our-bootstrap.scss */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+
+/* line 138, sass/_our-bootstrap.scss */
+label,
+select,
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"],
+input[type="radio"],
+input[type="checkbox"] {
+  cursor: pointer;
+}
+
+/* line 141, sass/_our-bootstrap.scss */
+input[type="search"] {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  -webkit-appearance: textfield;
+}
+
+/* line 148, sass/_our-bootstrap.scss */
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+}
+
+/* line 151, sass/_our-bootstrap.scss */
+textarea {
+  overflow: auto;
+  vertical-align: top;
+}
+
+@media print {
+  /* line 156, sass/_our-bootstrap.scss */
+  * {
+    text-shadow: none !important;
+    color: #000 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+  }
+
+  /* line 163, sass/_our-bootstrap.scss */
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+
+  /* line 166, sass/_our-bootstrap.scss */
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+
+  /* line 169, sass/_our-bootstrap.scss */
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+
+  /* line 174, sass/_our-bootstrap.scss */
+  .ir a:after,
+  a[href^="javascript:"]:after,
+  a[href^="#"]:after {
+    content: "";
+  }
+
+  /* line 178, sass/_our-bootstrap.scss */
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  /* line 182, sass/_our-bootstrap.scss */
+  thead {
+    display: table-header-group;
+  }
+
+  /* line 186, sass/_our-bootstrap.scss */
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+
+  /* line 189, sass/_our-bootstrap.scss */
+  img {
+    max-width: 100% !important;
+  }
+
+  @page {
+    margin: 0.5cm;
+}
+
+  /* line 197, sass/_our-bootstrap.scss */
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  /* line 202, sass/_our-bootstrap.scss */
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}
+/* line 206, sass/_our-bootstrap.scss */
+body {
+  margin: 0;
+  font-family: "Nunito", Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  line-height: 16px;
+  color: #000000;
+  background-color: #ffffff;
+}
+
+/* line 214, sass/_our-bootstrap.scss */
+a {
+  color: #000000;
+  text-decoration: none;
+}
+
+/* line 219, sass/_our-bootstrap.scss */
+a:hover,
+a:focus {
+  color: #000000;
+  text-decoration: underline;
+}
+
+/* line 223, sass/_our-bootstrap.scss */
+.img-rounded {
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+}
+
+/* line 228, sass/_our-bootstrap.scss */
+.img-polaroid {
+  padding: 4px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* line 237, sass/_our-bootstrap.scss */
+.img-circle {
+  -webkit-border-radius: 500px;
+  -moz-border-radius: 500px;
+  border-radius: 500px;
+}
+
+/* line 242, sass/_our-bootstrap.scss */
+p {
+  margin: 0 0 10px;
+}
+
+/* line 245, sass/_our-bootstrap.scss */
+.lead {
+  margin-bottom: 20px;
+  font-size: 21px;
+  font-weight: 200;
+  line-height: 30px;
+}
+
+/* line 251, sass/_our-bootstrap.scss */
+small {
+  font-size: 85%;
+}
+
+/* line 254, sass/_our-bootstrap.scss */
+strong {
+  font-weight: bold;
+}
+
+/* line 257, sass/_our-bootstrap.scss */
+em {
+  font-style: italic;
+}
+
+/* line 260, sass/_our-bootstrap.scss */
+cite {
+  font-style: normal;
+}
+
+/* line 263, sass/_our-bootstrap.scss */
+.muted {
+  color: #999999;
+}
+
+/* line 267, sass/_our-bootstrap.scss */
+a.muted:hover,
+a.muted:focus {
+  color: #808080;
+}
+
+/* line 270, sass/_our-bootstrap.scss */
+.text-warning {
+  color: #c09853;
+}
+
+/* line 274, sass/_our-bootstrap.scss */
+a.text-warning:hover,
+a.text-warning:focus {
+  color: #a47e3c;
+}
+
+/* line 277, sass/_our-bootstrap.scss */
+.text-error {
+  color: #b94a48;
+}
+
+/* line 281, sass/_our-bootstrap.scss */
+a.text-error:hover,
+a.text-error:focus {
+  color: #953b39;
+}
+
+/* line 284, sass/_our-bootstrap.scss */
+.text-info {
+  color: #3a87ad;
+}
+
+/* line 288, sass/_our-bootstrap.scss */
+a.text-info:hover,
+a.text-info:focus {
+  color: #2d6987;
+}
+
+/* line 291, sass/_our-bootstrap.scss */
+.text-success {
+  color: #468847;
+}
+
+/* line 295, sass/_our-bootstrap.scss */
+a.text-success:hover,
+a.text-success:focus {
+  color: #356635;
+}
+
+/* line 298, sass/_our-bootstrap.scss */
+.text-left {
+  text-align: left;
+}
+
+/* line 301, sass/_our-bootstrap.scss */
+.text-right {
+  text-align: right;
+}
+
+/* line 304, sass/_our-bootstrap.scss */
+.text-center {
+  text-align: center;
+}
+
+/* line 312, sass/_our-bootstrap.scss */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 10px 0;
+  font-family: inherit;
+  font-weight: bold;
+  line-height: 20px;
+  color: inherit;
+  text-rendering: optimizelegibility;
+}
+
+/* line 325, sass/_our-bootstrap.scss */
+h1 small,
+h2 small,
+h3 small,
+h4 small,
+h5 small,
+h6 small {
+  font-weight: normal;
+  line-height: 1;
+  color: #999999;
+}
+
+/* line 332, sass/_our-bootstrap.scss */
+h1,
+h2,
+h3 {
+  line-height: 40px;
+}
+
+/* line 335, sass/_our-bootstrap.scss */
+h1 {
+  font-size: 38.5px;
+}
+
+/* line 338, sass/_our-bootstrap.scss */
+h2 {
+  font-size: 31.5px;
+}
+
+/* line 341, sass/_our-bootstrap.scss */
+h3 {
+  font-size: 24.5px;
+}
+
+/* line 344, sass/_our-bootstrap.scss */
+h4 {
+  font-size: 17.5px;
+}
+
+/* line 347, sass/_our-bootstrap.scss */
+h5 {
+  font-size: 14px;
+}
+
+/* line 350, sass/_our-bootstrap.scss */
+h6 {
+  font-size: 11.9px;
+}
+
+/* line 353, sass/_our-bootstrap.scss */
+h1 small {
+  font-size: 24.5px;
+}
+
+/* line 356, sass/_our-bootstrap.scss */
+h2 small {
+  font-size: 17.5px;
+}
+
+/* line 359, sass/_our-bootstrap.scss */
+h3 small {
+  font-size: 14px;
+}
+
+/* line 362, sass/_our-bootstrap.scss */
+h4 small {
+  font-size: 14px;
+}
+
+/* line 365, sass/_our-bootstrap.scss */
+.page-header {
+  padding-bottom: 9px;
+  margin: 20px 0 30px;
+  border-bottom: 1px solid #eeeeee;
+}
+
+/* line 371, sass/_our-bootstrap.scss */
+ul,
+ol {
+  padding: 0;
+  margin: 0 0 10px 25px;
+}
+
+/* line 378, sass/_our-bootstrap.scss */
+ul ul,
+ul ol,
+ol ol,
+ol ul {
+  margin-bottom: 0;
+}
+
+/* line 381, sass/_our-bootstrap.scss */
+li {
+  line-height: 20px;
+}
+
+/* line 385, sass/_our-bootstrap.scss */
+ul.unstyled,
+ol.unstyled {
+  margin-left: 0;
+  list-style: none;
+}
+
+/* line 390, sass/_our-bootstrap.scss */
+ul.inline,
+ol.inline {
+  margin-left: 0;
+  list-style: none;
+}
+
+/* line 395, sass/_our-bootstrap.scss */
+ul.inline > li,
+ol.inline > li {
+  display: inline-block;
+  *display: inline;
+  /* IE7 inline-block hack */
+  *zoom: 1;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+/* line 404, sass/_our-bootstrap.scss */
+dl {
+  margin-bottom: 20px;
+}
+
+/* line 408, sass/_our-bootstrap.scss */
+dt,
+dd {
+  line-height: 20px;
+}
+
+/* line 411, sass/_our-bootstrap.scss */
+dt {
+  font-weight: bold;
+}
+
+/* line 414, sass/_our-bootstrap.scss */
+dd {
+  margin-left: 10px;
+}
+
+/* line 417, sass/_our-bootstrap.scss */
+.dl-horizontal {
+  *zoom: 1;
+}
+
+/* line 421, sass/_our-bootstrap.scss */
+.dl-horizontal:before,
+.dl-horizontal:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+
+/* line 426, sass/_our-bootstrap.scss */
+.dl-horizontal:after {
+  clear: both;
+}
+
+/* line 429, sass/_our-bootstrap.scss */
+.dl-horizontal dt {
+  float: left;
+  width: 160px;
+  clear: left;
+  text-align: right;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* line 438, sass/_our-bootstrap.scss */
+.dl-horizontal dd {
+  margin-left: 180px;
+}
+
+/* line 441, sass/_our-bootstrap.scss */
+hr {
+  margin: 20px 0;
+  border: 0;
+  border-top: 1px solid #eeeeee;
+  border-bottom: 1px solid #ffffff;
+}
+
+/* line 448, sass/_our-bootstrap.scss */
+abbr[title],
+abbr[data-original-title] {
+  cursor: help;
+  border-bottom: 1px dotted #999999;
+}
+
+/* line 452, sass/_our-bootstrap.scss */
+abbr.initialism {
+  font-size: 90%;
+  text-transform: uppercase;
+}
+
+/* line 456, sass/_our-bootstrap.scss */
+blockquote {
+  padding: 0 0 0 15px;
+  margin: 0 0 20px;
+  border-left: 5px solid #eeeeee;
+}
+
+/* line 461, sass/_our-bootstrap.scss */
+blockquote p {
+  margin-bottom: 0;
+  font-size: 17.5px;
+  font-weight: 300;
+  line-height: 1.25;
+}
+
+/* line 467, sass/_our-bootstrap.scss */
+blockquote small {
+  display: block;
+  line-height: 20px;
+  color: #999999;
+}
+
+/* line 472, sass/_our-bootstrap.scss */
+blockquote small:before {
+  content: '\2014 \00A0';
+}
+
+/* line 475, sass/_our-bootstrap.scss */
+blockquote.pull-right {
+  float: right;
+  padding-right: 15px;
+  padding-left: 0;
+  border-right: 5px solid #eeeeee;
+  border-left: 0;
+}
+
+/* line 483, sass/_our-bootstrap.scss */
+blockquote.pull-right p,
+blockquote.pull-right small {
+  text-align: right;
+}
+
+/* line 486, sass/_our-bootstrap.scss */
+blockquote.pull-right small:before {
+  content: '';
+}
+
+/* line 489, sass/_our-bootstrap.scss */
+blockquote.pull-right small:after {
+  content: '\00A0 \2014';
+}
+
+/* line 495, sass/_our-bootstrap.scss */
+q:before,
+q:after,
+blockquote:before,
+blockquote:after {
+  content: "";
+}
+
+/* line 498, sass/_our-bootstrap.scss */
+address {
+  display: block;
+  margin-bottom: 20px;
+  font-style: normal;
+  line-height: 20px;
+}
+
+/* line 505, sass/_our-bootstrap.scss */
+code,
+pre {
+  padding: 0 3px 2px;
+  font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
+  font-size: 12px;
+  color: #333333;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+
+/* line 514, sass/_our-bootstrap.scss */
+code {
+  padding: 2px 4px;
+  color: #d14;
+  background-color: #f7f7f9;
+  border: 1px solid #e1e1e8;
+  white-space: nowrap;
+}
+
+/* line 521, sass/_our-bootstrap.scss */
+pre {
+  display: block;
+  padding: 9.5px;
+  margin: 0 0 10px;
+  font-size: 13px;
+  line-height: 20px;
+  word-break: break-all;
+  word-wrap: break-word;
+  white-space: pre;
+  white-space: pre-wrap;
+  background-color: #f5f5f5;
+  border: 1px solid #ccc;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+
+/* line 538, sass/_our-bootstrap.scss */
+pre.prettyprint {
+  margin-bottom: 20px;
+}
+
+/* line 541, sass/_our-bootstrap.scss */
+pre code {
+  padding: 0;
+  color: inherit;
+  white-space: pre;
+  white-space: pre-wrap;
+  background-color: transparent;
+  border: 0;
+}
+
+/* line 549, sass/_our-bootstrap.scss */
+.pre-scrollable {
+  max-height: 340px;
+  overflow-y: scroll;
+}
+
+/* line 1, sass/_site-wide.scss */
+* {
+  -webkit-box-sizing: border-box;
+  /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;
+  /* Firefox, other Gecko */
+  box-sizing: border-box;
+  /* Opera/IE 8+ */
+}
+
+/* line 7, sass/_site-wide.scss */
+.container {
+  background: #fbfaf8;
+}
+
+/* line 11, sass/_site-wide.scss */
+a {
+  color: black;
+}
+
+/* line 15, sass/_site-wide.scss */
+a:hover {
+  color: black;
+  text-decoration: none;
+}
+
+/* line 20, sass/_site-wide.scss */
+nav {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  text-align: center;
+}
+
+/* line 31, sass/_site-wide.scss */
+.ctrl {
+  display: block;
+  position: absolute;
+  cursor: pointer;
+  z-index: 10;
+}
+
+/* line 38, sass/_site-wide.scss */
+.shutter {
+  top: 12px;
+  width: 40px;
+  height: 30px;
+  z-index: 5555;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  /* for some reason these three needed to center this item */
+}
+
+/* line 50, sass/_site-wide.scss */
+.main-nav .shutter {
+  background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAPCAYAAADtc08vAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gMECCg2sNZQ8wAAAN1JREFUKM+tkzEKwkAQRV9ygGCvkIVUBhJMZUDBPYoeLOQeWpgydjZZKzFC7CUXWJu1UDbKor/+82aY+eNhURSKGSCBEXAHqvO1Pdq83luhBMogCMQ8z5nGMbeuY7fd0vd9C2zO17ZioOs6S1JdFoW2qSwKnSWpjkKxthXLLEm1ahr9SappnhD5DtgPdbZNEoXi8rKwLEm1i1aLpTaLxgdm8zzHRcYvnwAxjWMnwHgywZwYH2hPSjkBbl2HyQc+cDzUtRPA+Kv/XOEvOfgliV9/4aQUh7oe/AXv1298AG+gTRQZjVZQAAAAAElFTkSuQmCC') no-repeat;
+  background-position: center;
+}
+
+/* line 55, sass/_site-wide.scss */
+.thumbmenu-nav .shutter {
+  background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAOCAYAAAAWo42rAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gIcDDQULAWyVgAAAJpJREFUKM990K0RwkAQhuFnJhWcRdICFpkWsMi0EI2jBTSOFtC4tAAlJBZ3mE0mcyRZd3Pvfj9b4YAzjnj5nyuG8fFEj1RATfxNUyOjLcA39qXFo1BtFxaJzRyZUmm5FDwHVG+BKew31eYFcpxtmqqAWnywC/C+ZtvN7pfXct4CmEfoSqheKDCqNmWBeqVYj1RFgYTLAvjFCcMPKr0kgeGsve4AAAAASUVORK5CYII=') no-repeat;
+  background-position: center;
+}
+
+/* line 62, sass/_site-wide.scss */
+.up,
+.down {
+  width: 100%;
+  height: 23%;
+  text-align: center;
+  background: url('data:image/png;base64,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') no-repeat;
+}
+
+/* line 69, sass/_site-wide.scss */
+.up {
+  top: 0;
+  background-position: center top;
+}
+
+/* line 74, sass/_site-wide.scss */
+.down {
+  bottom: 0;
+  background-position: center bottom;
+}
+
+/* line 80, sass/_site-wide.scss */
+.right,
+.left {
+  width: 50%;
+  height: 100%;
+}
+/* line 85, sass/_site-wide.scss */
+.right img,
+.left img {
+  position: fixed;
+}
+
+/* line 90, sass/_site-wide.scss */
+.right {
+  right: 0;
+}
+/* line 93, sass/_site-wide.scss */
+.right img {
+  right: 3%;
+}
+
+/* line 100, sass/_site-wide.scss */
+.left {
+  left: 0;
+}
+/* line 102, sass/_site-wide.scss */
+.left img {
+  left: 3%;
+}
+
+@font-face {
+  font-family: "League Gothic";
+  src: url('/assets/fonts/league_gothic/leaguegothic-regular-webfont.ttf') format('truetype'), url('/assets/fonts/league_gothic/leaguegothic-regular-webfont.svg') format('svg');
+}
+
+/* line 1, sass/_layouts.scss */
+.container {
+  width: 100%;
+  overflow: hidden;
+}
+
+/* line 9, sass/_layouts.scss */
+.about,
+.main-frame,
+.main-nav,
+.gridnav {
+  opacity: 0;
+}
+
+/* line 13, sass/_layouts.scss */
+#logo {
+  position: fixed;
+  top: 30px;
+  left: 10px;
+  font: 34px "League Gothic", Helvetica, Arial, sans-serif;
+  z-index: 10000;
+}
+/* line 20, sass/_layouts.scss */
+#logo a {
+  padding: 20px;
+}
+
+/* line 26, sass/_layouts.scss */
+.splash {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 10000;
+}
+/* line 34, sass/_layouts.scss */
+.splash img,
+.splash video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: 10;
+}
+/* line 42, sass/_layouts.scss */
+.splash .splash-text {
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  z-index: 5555;
+}
+/* line 52, sass/_layouts.scss */
+.splash .header,
+.splash .subheader {
+  font-family: "League Gothic", Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  color: #fff;
+}
+/* line 58, sass/_layouts.scss */
+.splash .header {
+  font-size: 90px;
+  line-height: 90px;
+}
+/* line 63, sass/_layouts.scss */
+.splash .subheader {
+  font-size: 30px;
+  line-height: 33px;
+}
+
+/* line 70, sass/_layouts.scss */
+.about {
+  box-sizing: initial;
+  /* border-box setting caused text to jump at end of slide when padding added */
+  display: none;
+  /* starts out hidden; jQuery-UI changes this to slide out */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 600px;
+  height: 100%;
+  padding: 58px 31px;
+  background: #fff;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=90);
+  opacity: 0.9;
+  z-index: 9999;
+}
+/* line 83, sass/_layouts.scss */
+.about .site-description {
+  margin-top: -2px;
+  font-size: 22px;
+  font-weight: normal;
+  font-family: "League Gothic", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+}
+
+/* line 93, sass/_layouts.scss */
+.gridnav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 98%;
+  min-width: 640px;
+  background: rgba(255, 255, 255, 0.85);
+  -webkit-box-shadow: black 2px 2px 10px;
+  -moz-box-shadow: black 2px 2px 10px;
+  box-shadow: black 2px 2px 10px;
+  overflow: hidden;
+}
+/* line 104, sass/_layouts.scss */
+.gridnav .jcarousel-pagination {
+  width: 30%;
+  margin: 0 auto;
+  padding-top: 30px;
+  text-align: center;
+}
+/* line 111, sass/_layouts.scss */
+.gridnav .gridframe {
+  position: relative;
+  margin: 0 auto;
+  max-height: 90%;
+}
+/* line 117, sass/_layouts.scss */
+.gridnav .categories {
+  position: absolute;
+  top: 80px;
+  width: 100%;
+  text-align: center;
+}
+/* line 124, sass/_layouts.scss */
+.gridnav .categories .category-filter, .gridnav .categories span {
+  font-size: 12px;
+  line-height: 12px;
+}
+/* line 129, sass/_layouts.scss */
+.gridnav .categories .category-filter:hover {
+  text-decoration: underline;
+}
+/* line 132, sass/_layouts.scss */
+.gridnav .categories .category-filter.active {
+  text-decoration: underline;
+}
+/* line 138, sass/_layouts.scss */
+.gridnav .jcarousel.thumbs {
+  width: 100%;
+}
+/* line 142, sass/_layouts.scss */
+.gridnav .jcarousel.thumbs li {
+  float: left;
+  margin-right: 300px;
+}
+/* line 147, sass/_layouts.scss */
+.gridnav .jcarousel.thumbs .grid-item {
+  position: relative;
+  float: left;
+  width: 210px;
+  height: 140px;
+  overflow: hidden;
+  background: #333;
+}
+/* line 155, sass/_layouts.scss */
+.gridnav .jcarousel.thumbs .grid-item:hover .overlay {
+  top: 0;
+}
+/* line 159, sass/_layouts.scss */
+.gridnav .jcarousel.thumbs .grid-item .overlay {
+  position: absolute;
+  top: -9999px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 15px;
+  text-align: center;
+  background: #b4f2f1;
+  overflow: hidden;
+}
+/* line 170, sass/_layouts.scss */
+.gridnav .jcarousel.thumbs .grid-item .overlay > div {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+/* line 179, sass/_layouts.scss */
+.gridnav .jcarousel.thumbs .grid-item .project-title,
+.gridnav .jcarousel.thumbs .grid-item .project-description {
+  margin: 0;
+  font-family: "League Gothic", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+/* line 186, sass/_layouts.scss */
+.gridnav .jcarousel.thumbs .grid-item .project-title {
+  font-size: 22px;
+  line-height: 22px;
+}
+/* line 192, sass/_layouts.scss */
+.gridnav .jcarousel.thumbs .grid-item .project-description {
+  visibility: hidden;
+  padding: 10px 0 0 0;
+  font-size: 12px;
+  line-height: 14px;
+}
+/* line 202, sass/_layouts.scss */
+.gridnav .jcarousel.thumbs .griditem.rightmost {
+  margin-right: 0;
+}
+
+/* line 211, sass/_layouts.scss */
+.main {
+  width: 100%;
+  height: 100%;
+  padding-top: 1px;
+  margin-top: -1px;
+  /* necessary to prevent .main-frame margin-top from pushing this down */
+}
+
+/* line 219, sass/_layouts.scss */
+.main-frame {
+  position: relative;
+  width: 66.67%;
+  height: 70%;
+  margin: 0 auto;
+}
+/* line 225, sass/_layouts.scss */
+.main-frame .option {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+/* line 232, sass/_layouts.scss */
+.main-frame .option img,
+.main-frame .option iframe {
+  position: absolute;
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+/* line 244, sass/_layouts.scss */
+.main-frame .option .caption {
+  position: absolute;
+  margin: 0 auto;
+  padding: 5px 0;
+  background: #fbfaf8;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  -webkit-transition-property: opacity;
+  -moz-transition-property: opacity;
+  -o-transition-property: opacity;
+  transition-property: opacity;
+  -webkit-transition-duration: 0.3s;
+  -moz-transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+/* line 259, sass/_layouts.scss */
+.main-frame .option .media-title {
+  font-size: 12px;
+  line-height: 24px;
+  margin: 0;
+  font-weight: normal;
+}
+/* line 266, sass/_layouts.scss */
+.main-frame .option .description {
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: 10px;
+  line-height: 16px;
+  text-align: center;
+  font-weight: normal;
+}
+/* line 276, sass/_layouts.scss */
+.main-frame .option.left {
+  top: 0;
+  left: -3000px;
+}
+/* line 280, sass/_layouts.scss */
+.main-frame .option.right {
+  top: 0;
+  left: 3000px;
+}
+/* line 284, sass/_layouts.scss */
+.main-frame .option.up {
+  top: -3000px;
+  left: 0;
+}
+/* line 288, sass/_layouts.scss */
+.main-frame .option.down {
+  top: 3000px;
+  left: 0;
+}
+
+/* line 299, sass/_layouts.scss */
+.error .container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 1;
+  text-align: center;
+}
+/* line 308, sass/_layouts.scss */
+.error .container:before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+/* line 316, sass/_layouts.scss */
+.error .error-message {
+  display: inline-block;
+  width: 650px;
+  vertical-align: middle;
+  margin: 0 auto;
+}
+/* line 322, sass/_layouts.scss */
+.error .error-message p {
+  margin: 0;
+}
+/* line 326, sass/_layouts.scss */
+.error .error-message span {
+  font-family: "Nunito", Helvetica, Arial, sans-serif;
+  font-size: 30px;
+  line-height: 34px;
+  text-transform: uppercase;
+}
+
+/*
+This is the visible area of you carousel.
+Set a width here to define how much items are visible.
+The width can be either fixed in px or flexible in %.
+Position must be relative!
+*/
+/* line 7, sass/_jcarousel.scss */
+.jcarousel {
+  position: relative;
+  /*overflow: hidden;*/
+}
+
+/*
+This is the container of the carousel items.
+You must ensure that the position is relative or absolute and
+that the width is big enough to contain all items.
+*/
+/* line 17, sass/_jcarousel.scss */
+.jcarousel ul {
+  width: 20000em;
+  position: relative;
+  /* Optional, required in this case since it's a <ul> element */
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+These are the item elements. jCarousel works best, if the items
+have a fixed width and height (but it's not required).
+*/
+/* line 31, sass/_jcarousel.scss */
+.jcarousel li {
+  /* Required only for block elements like <li>'s */
+  float: left;
+}
+
+/* line 36, sass/_jcarousel.scss */
+.jcarousel-caption {
+  position: relative;
+  bottom: 20px;
+  z-index: 10;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: center;
+  color: white;
+  /*color: @carousel-caption-color;
+  text-shadow: @carousel-text-shadow;*/
+}
+
+/** Carousel Controls **/
+/* line 51, sass/_jcarousel.scss */
+.jcarousel-control-prev,
+.jcarousel-control-next {
+  position: fixed;
+  width: 30px;
+  height: 30px;
+}
+
+/* line 66, sass/_jcarousel.scss */
+.jcarousel-control-prev:hover span,
+.jcarousel-control-next:hover span {
+  display: block;
+}
+
+/* line 71, sass/_jcarousel.scss */
+.jcarousel-control-prev.inactive,
+.jcarousel-control-next.inactive {
+  opacity: .5;
+  cursor: default;
+}
+
+/*** for pagination ***/
+/* line 78, sass/_jcarousel.scss */
+.jcarousel-pagination a {
+  position: relative;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 11px;
+  height: 10px;
+  width: 10px;
+  line-height: 10px;
+  background: #fff;
+  color: #4E443C;
+  border-radius: 10px;
+  text-indent: -9999px;
+  margin-right: 20px;
+  z-index: 10000;
+  -webkit-box-shadow: 0 0 2px #4E443C;
+  -moz-box-shadow: 0 0 2px #4E443C;
+  box-shadow: 0 0 2px #4E443C;
+}
+/* line 101, sass/_jcarousel.scss */
+.jcarousel-pagination a:last-of-type {
+  margin-right: 0;
+}
+
+/* line 106, sass/_jcarousel.scss */
+.jcarousel-pagination a.active {
+  background: #4E443C;
+  color: #fff;
+  opacity: 1;
+  -webkit-box-shadow: 0 0 2px #F0EFE7;
+  -moz-box-shadow: 0 0 2px #F0EFE7;
+  box-shadow: 0 0 2px #F0EFE7;
+}

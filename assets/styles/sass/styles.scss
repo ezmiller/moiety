@@ -1,0 +1,46 @@
+/*
+style.scss - Sass Styles for lanningsmith.com
+*/
+
+/*==================================================================================*/
+/*    Setup
+/*==================================================================================*/
+
+/* Dependencies */
+@import "compass/css3";
+
+
+/*==================================================================================*/
+/*    Variables
+/*==================================================================================*/
+
+/* fonts */
+$defaultFontSize: 12px;
+$defaultLineHeight: 16px;  /* 22px */
+$defaultFontColor: black;
+$baseFontStack: 'Nunito', Helvetica, Arial, sans-serif;
+$headerFontStack: 'League Gothic', Helvetica, Arial, sans-serif;
+
+/* nav images */
+$upDownNav: 'arrow_updown.png';
+$rightLeftNav: 'arrow_rightleft.png';
+
+/* layering */
+$aboveItAll: 10000;
+$topLayer: 9999;
+$middleLayer: 5555;
+$bottomLayer: 10;
+
+/* colors */
+$siteBackground: #fbfaf8;
+$thumbOverlayBackground: #b4f2f1;
+
+/* sizing */
+$minViewportWidth: 640px;
+$minViewportHeight: 600px;
+
+@import 'our-bootstrap';
+@import 'site-wide';
+@import 'typography';
+@import 'layouts';
+@import 'jcarousel';

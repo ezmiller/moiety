@@ -1,0 +1,14 @@
+.DS_Store
+docs
+content
+site/cache
+thumbs
+
+# kirby site config file
+site/config/config.php
+
+# all .htaccess related files
+.ht*
+
+# for compass
+.sass-cache
