@@ -213,6 +213,10 @@
 	height: 100%;
 	padding-top: 1px;
 	margin-top: -1px; /* necessary to prevent .main-frame margin-top from pushing this down */
+
+	background: url('/assets/images/moietybackground1.jpg') no-repeat;
+	background-position: center;
+	background-size: cover;
 }
 
 
