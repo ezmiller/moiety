@@ -130,7 +130,7 @@ define(["jquery",
 
 		$('.main').css({
 			'height': this.info.viewport.height,
-			'background': $('.main').css('background')
+			'background-image': $('.main').css('background-image')
 		});
 		$('.main-frame').vAlignInViewport();
 		$('.option.center').find('img').load(function() {

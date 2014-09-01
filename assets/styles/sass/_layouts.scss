@@ -214,8 +214,9 @@
 	padding-top: 1px;
 	margin-top: -1px; /* necessary to prevent .main-frame margin-top from pushing this down */
 
-	background-position: center;
-	background-size: cover;
+	background-repeat: no-repeat !important;
+	background-position: center !important;
+	background-size: cover !important;
 }
 
 
