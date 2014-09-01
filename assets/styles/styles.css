@@ -916,7 +916,7 @@ nav {
 /* line 13, sass/_layouts.scss */
 #logo {
   position: fixed;
-  top: -10px;
+  top: -37px;
   left: 5px;
   font: 34px "League Gothic", Helvetica, Arial, sans-serif;
   z-index: 10000;
