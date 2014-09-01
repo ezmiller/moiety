@@ -81,7 +81,8 @@
 	width: 600px;
 	height: 100%;
 	padding: 58px 31px;
-	background: #fff;
+//	background: #fff;
+	background: rgba(255,255,255,0.85);
 	@include opacity(.9);
 	z-index: $topLayer;
 
