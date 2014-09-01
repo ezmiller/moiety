@@ -1,0 +1,37 @@
+﻿Title: (dev)itsmoiety
+
+----
+
+Author: CodeCuts
+
+----
+
+Description: 
+
+----
+
+Keywords: 
+
+----
+
+Copyright: © 2014-(date: Year) CodeCuts
+
+----
+
+Categories_enabled: no
+
+----
+
+Categories: 
+
+----
+
+Images_in_loop: yes
+
+----
+
+Thumbmenu_enabled: no
+
+----
+
+Splash_page: no
