@@ -253,8 +253,9 @@
 		.caption{
 			position: absolute;
 	    	margin: 0 auto;
-	    	padding: 5px 0;
+	    	padding: 8px;
 //	    	background: $siteBackground;
+			background: rgba(222, 252, 218, 0.5);
 	    	@include opacity(0);
 	    	@include transition-property(opacity);
 	    	@include transition-duration(0.3s);

@@ -1158,7 +1158,8 @@ nav {
 .main-frame .option .caption {
   position: absolute;
   margin: 0 auto;
-  padding: 5px 0;
+  padding: 8px;
+  background: rgba(222, 252, 218, 0.5);
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
   opacity: 0;
   -moz-transition-property: opacity;
@@ -1170,14 +1171,14 @@ nav {
   -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
 }
-/* line 268, sass/_layouts.scss */
+/* line 269, sass/_layouts.scss */
 .main-frame .option .media-title {
   font-size: 12px;
   line-height: 24px;
   margin: 0;
   font-weight: normal;
 }
-/* line 275, sass/_layouts.scss */
+/* line 276, sass/_layouts.scss */
 .main-frame .option .description {
   max-width: 600px;
   margin: 0 auto;
@@ -1186,28 +1187,28 @@ nav {
   text-align: center;
   font-weight: normal;
 }
-/* line 285, sass/_layouts.scss */
+/* line 286, sass/_layouts.scss */
 .main-frame .option.left {
   top: 0;
   left: -3000px;
 }
-/* line 289, sass/_layouts.scss */
+/* line 290, sass/_layouts.scss */
 .main-frame .option.right {
   top: 0;
   left: 3000px;
 }
-/* line 293, sass/_layouts.scss */
+/* line 294, sass/_layouts.scss */
 .main-frame .option.up {
   top: -3000px;
   left: 0;
 }
-/* line 297, sass/_layouts.scss */
+/* line 298, sass/_layouts.scss */
 .main-frame .option.down {
   top: 3000px;
   left: 0;
 }
 
-/* line 308, sass/_layouts.scss */
+/* line 309, sass/_layouts.scss */
 .error .container {
   position: absolute;
   top: 0;
@@ -1217,25 +1218,25 @@ nav {
   opacity: 1;
   text-align: center;
 }
-/* line 317, sass/_layouts.scss */
+/* line 318, sass/_layouts.scss */
 .error .container:before {
   content: '';
   display: inline-block;
   height: 100%;
   vertical-align: middle;
 }
-/* line 325, sass/_layouts.scss */
+/* line 326, sass/_layouts.scss */
 .error .error-message {
   display: inline-block;
   width: 650px;
   vertical-align: middle;
   margin: 0 auto;
 }
-/* line 331, sass/_layouts.scss */
+/* line 332, sass/_layouts.scss */
 .error .error-message p {
   margin: 0;
 }
-/* line 335, sass/_layouts.scss */
+/* line 336, sass/_layouts.scss */
 .error .error-message span {
   font-family: "Nunito", Helvetica, Arial, sans-serif;
   font-size: 30px;
