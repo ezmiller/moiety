@@ -12,14 +12,19 @@
 
 #logo {     
 	position: fixed;     
-	top: 30px;     
-	left: 10px;     
+	top: -10px;
+	left: 5px;     
 	font: 34px $headerFontStack;
 	z-index: $aboveItAll;
 
 	a {
 		padding: 20px;
 	}
+
+	img {
+		max-width: 80%;
+	}
+
 }
 
 
