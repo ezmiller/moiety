@@ -897,7 +897,7 @@ nav {
 
 @font-face {
   font-family: "League Gothic";
-  src: url('/assets/fonts/league_gothic/leaguegothic-regular-webfont.ttf?1409392463') format('truetype'), url('/assets/fonts/league_gothic/leaguegothic-regular-webfont.svg?1409392463') format('svg');
+  src: url('/assets/fonts/league_gothic/leaguegothic-regular-webfont.ttf?1409580830') format('truetype'), url('/assets/fonts/league_gothic/leaguegothic-regular-webfont.svg?1409580830') format('svg');
 }
 /* line 1, sass/_layouts.scss */
 .container {
@@ -1118,26 +1118,25 @@ nav {
   padding-top: 1px;
   margin-top: -1px;
   /* necessary to prevent .main-frame margin-top from pushing this down */
-  background: url("/assets/images/moietybackground1.jpg") no-repeat;
   background-position: center;
   background-size: cover;
 }
 
-/* line 223, sass/_layouts.scss */
+/* line 222, sass/_layouts.scss */
 .main-frame {
   position: relative;
   width: 66.67%;
   height: 70%;
   margin: 0 auto;
 }
-/* line 229, sass/_layouts.scss */
+/* line 228, sass/_layouts.scss */
 .main-frame .option {
   position: absolute;
   width: 100%;
   height: 100%;
   text-align: center;
 }
-/* line 235, sass/_layouts.scss */
+/* line 234, sass/_layouts.scss */
 .main-frame .option img,
 .main-frame .option iframe {
   position: absolute;
@@ -1150,12 +1149,11 @@ nav {
   bottom: 0;
   margin: auto;
 }
-/* line 248, sass/_layouts.scss */
+/* line 247, sass/_layouts.scss */
 .main-frame .option .caption {
   position: absolute;
   margin: 0 auto;
   padding: 5px 0;
-  background: #fbfaf8;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
   opacity: 0;
   -moz-transition-property: opacity;
@@ -1167,14 +1165,14 @@ nav {
   -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
 }
-/* line 263, sass/_layouts.scss */
+/* line 262, sass/_layouts.scss */
 .main-frame .option .media-title {
   font-size: 12px;
   line-height: 24px;
   margin: 0;
   font-weight: normal;
 }
-/* line 270, sass/_layouts.scss */
+/* line 269, sass/_layouts.scss */
 .main-frame .option .description {
   max-width: 600px;
   margin: 0 auto;
@@ -1183,28 +1181,28 @@ nav {
   text-align: center;
   font-weight: normal;
 }
-/* line 280, sass/_layouts.scss */
+/* line 279, sass/_layouts.scss */
 .main-frame .option.left {
   top: 0;
   left: -3000px;
 }
-/* line 284, sass/_layouts.scss */
+/* line 283, sass/_layouts.scss */
 .main-frame .option.right {
   top: 0;
   left: 3000px;
 }
-/* line 288, sass/_layouts.scss */
+/* line 287, sass/_layouts.scss */
 .main-frame .option.up {
   top: -3000px;
   left: 0;
 }
-/* line 292, sass/_layouts.scss */
+/* line 291, sass/_layouts.scss */
 .main-frame .option.down {
   top: 3000px;
   left: 0;
 }
 
-/* line 303, sass/_layouts.scss */
+/* line 302, sass/_layouts.scss */
 .error .container {
   position: absolute;
   top: 0;
@@ -1214,25 +1212,25 @@ nav {
   opacity: 1;
   text-align: center;
 }
-/* line 312, sass/_layouts.scss */
+/* line 311, sass/_layouts.scss */
 .error .container:before {
   content: '';
   display: inline-block;
   height: 100%;
   vertical-align: middle;
 }
-/* line 320, sass/_layouts.scss */
+/* line 319, sass/_layouts.scss */
 .error .error-message {
   display: inline-block;
   width: 650px;
   vertical-align: middle;
   margin: 0 auto;
 }
-/* line 326, sass/_layouts.scss */
+/* line 325, sass/_layouts.scss */
 .error .error-message p {
   margin: 0;
 }
-/* line 330, sass/_layouts.scss */
+/* line 329, sass/_layouts.scss */
 .error .error-message span {
   font-family: "Nunito", Helvetica, Arial, sans-serif;
   font-size: 30px;

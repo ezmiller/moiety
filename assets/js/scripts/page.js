@@ -128,7 +128,10 @@ define(["jquery",
 	layout = function() {
 		var page = this;
 
-		$('.main').css('height', this.info.viewport.height);
+		$('.main').css({
+			'height': this.info.viewport.height,
+			'background': $('.main').css('background')
+		});
 		$('.main-frame').vAlignInViewport();
 		$('.option.center').find('img').load(function() {
 			$('.main-nav .left, .main-nav .right').css('width', (page.info.viewport.width - $(this).width()) /2);

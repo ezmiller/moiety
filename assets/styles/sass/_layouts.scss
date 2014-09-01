@@ -214,7 +214,6 @@
 	padding-top: 1px;
 	margin-top: -1px; /* necessary to prevent .main-frame margin-top from pushing this down */
 
-	background: url('/assets/images/moietybackground1.jpg') no-repeat;
 	background-position: center;
 	background-size: cover;
 }
@@ -249,7 +248,7 @@
 			position: absolute;
 	    	margin: 0 auto;
 	    	padding: 5px 0;
-	    	background: $siteBackground;
+//	    	background: $siteBackground;
 	    	@include opacity(0);
 	    	@include transition-property(opacity);
 	    	@include transition-duration(0.3s);

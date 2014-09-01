@@ -43,7 +43,7 @@ if ( $categories_on ) {
 		<?php echo kirbytext($pages->find('/about-us')->text()) ?>
 	</section>
 
-	<section class="main">
+	<section class="main" style="background: url(<?php echo "'".$pages->find('/background')->images()->first()->url() . "'" ?>)">
 		<nav class="main-nav">
 			<div class="ctrl shutter" title="Open Thumb Menu"></div>
 			<div class="ctrl left" title="Previous Image"><img src="/assets/images/arrow_rightleft.png" alt"left arrow"/></div>
