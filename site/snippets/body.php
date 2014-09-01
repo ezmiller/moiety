@@ -20,7 +20,7 @@ if ( $categories_on ) {
 <div class="container">
 
 	<header>
-		<div id="logo"><a href="">LANNINGSMITH</a></div>
+		<div id="logo"><a href=""><img title="Itsmoiety" src="<?php echo $pages->find('/logo')->images()->first()->url() ?>"/></a></div>
 	</header>
 
 	<?php  if ( $splash_on == true ) : ?>
