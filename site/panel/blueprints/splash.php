@@ -4,7 +4,7 @@
 
 title: Splash
 pages: false
-files: false
+files: true
 fields:
   header: 
     label: Site Header
