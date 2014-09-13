@@ -2,8 +2,8 @@ define(["jquery"], function() {
 	
 	$.fn.vAlign = function() {
 		return this.each(function() {
-			var ah = $(this).height();
-			var ph = $(this).parent().height();
+			var ah = $(this).outerHeight();
+			var ph = $(this).parent().outerHeight();
 			var mh = (ph - ah) / 2;
 			$(this).css('margin-top', mh);
 //			console.log('element:'+ah+',parent:'+ph+'margin:'+mh);
@@ -12,8 +12,8 @@ define(["jquery"], function() {
 
 	$.fn.vAlignInViewport = function() {
 		return this.each(function() {
-			var ah = $(this).height();
-	    	var ph = $(window).height();
+			var ah = $(this).outerHeight();
+	    	var ph = $(window).outerHeight();
 	    	var mh = (ph - ah) / 2;
 	    	$(this).css('margin-top', mh);
 		});
@@ -21,19 +21,19 @@ define(["jquery"], function() {
 
 	$.fn.hAlign = function() {
 		return this.each(function() {
-			var ah = $(this).width();
-			var ph = $(this).parent().width();
-			var mh = (ph - ah) / 2;
-			$(this).css('margin-left', mh);
-//			console.log('element:'+ah+',parent:'+ph+'margin:'+mh);
+			var aw = $(this).outerWidth();
+			var pw = $(this).parent().outerWidth();
+			var mw = (pw - aw) / 2;
+			$(this).css('margin-left', mw);
+			console.log('element:'+aw+',parent:'+pw+'margin:'+mw);
   		});
 	};
 
 
 	$.fn.hAlignInViewport = function() {
 		return this.each(function() {
-			var ah = $(this).width();
-	    	var ph = $(window).width();
+			var ah = $(this).outerWidth();
+	    	var ph = $(window).outerWidth();
 	    	var mh = (ph - ah) / 2;
 	    	$(this).css('margin-left', mh);
 		});
