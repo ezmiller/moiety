@@ -107,6 +107,10 @@
 	@include box-shadow(#000 2px 2px 10px);
 	overflow:hidden;
 
+	background-repeat: no-repeat !important;
+	background-position: center !important;
+	background-size: cover !important;
+
 	.jcarousel-pagination {
 		width: 30%;
 		margin: 0 auto;
