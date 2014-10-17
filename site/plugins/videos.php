@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 class videos {
 
@@ -26,7 +26,7 @@ class videos {
 
 		$success = self::set_cache($id, $result);
 
-		if ( ! $success ) 
+		if ( ! $success )
 			error_log('videos.php::data: failed to set cache');
 
 		return $result;
@@ -48,7 +48,7 @@ class videos {
 
 		$embed = '<iframe src="http://player.vimeo.com/video/'.$video_data['id'].'" width="'.$video_data['width'].'" height="'.$video_data['height'].'" frameborder="0" badge="0" title="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" ></iframe>';
 
-		return $embed;	
+		return $embed;
 
 	}
 
@@ -64,7 +64,12 @@ class videos {
 
 		$video_data = db::select('video_cache', 'video_data', array('id'=>$video_id));
 
-		if ( ! empty($video_data) ) {
+		if ( array_key_exists('status', $video_data) ) {
+			error_log('videos.php::get_cached: ' . $video_data['msg']);
+			return false;
+		}
+
+		if ( ! empty($video_data)  ) {
 			return json_decode($video_data[0]['video_data']);
 		} else {
 			return false;
@@ -74,13 +79,15 @@ class videos {
 
 	private static function set_cache($id, $video_data) {
 
-		$success = db::insert('video_cache', array( 
-			'id' => $id, 
+		$success = db::insert('video_cache', array(
+			'id' => $id,
 			'video_data' => json_encode($video_data)
 		));
 
-		if ( $success['status'] === 'error' ) 
+		if ( $success['status'] === 'error' ) {
+			error_log('videos.php::set_cache:  problem saving video data to the db.');
 			return false;
+		}
 
 		return true;
 
@@ -105,7 +112,7 @@ class videos {
 	}
 
 	static function parse_youtube($link){
- 
+
         $regexstr = '~
             # Match Youtube link and embed code
             (?:                             # Group to match embed codes
@@ -135,15 +142,15 @@ class videos {
                 |</embed></object>          # or Match the end of the older embed
             )?                              # End Group of last bit of embed code
             ~ix';
- 
+
         preg_match($regexstr, $link, $matches);
- 
+
         return $matches[1];
- 
+
     }
 
  	static function parse_vimeo($link){
- 
+
         $regexstr = '~
             # Match Vimeo link and embed code
             (?:<iframe [^>]*src=")?       # If iframe match up to first quote of src
@@ -160,9 +167,9 @@ class videos {
             (?:[^>]*></iframe>)?        # Match the end of the iframe
             (?:<p>.*</p>)?              # Match any title information stuff
             ~ix';
- 
+
         preg_match($regexstr, $link, $matches);
- 
+
         return $matches[1];
     }
 

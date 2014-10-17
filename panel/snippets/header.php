@@ -79,7 +79,7 @@
   <ul class="bar submenu">
     <li><a<?php echo $panel->show == 'content' ?   ' class="active"' : '' ?> href="<?php echo showurl('content') ?>"><?php echo l::get('tabs.content') ?></a></li>  
     <?php 
-      if(($page ->template() == 'image') || ($page->template() == 'splash'))
+      if(($page ->template() == 'image') || ($page->template() == 'splash') || ($page->template() == 'background') || ($page->template() == 'logo'))
       {?>
         <li><a<?php echo $panel->show == 'files'   ?   ' class="active"' : '' ?> href="<?php echo showurl('files') ?>"><?php echo l::get('tabs.files') ?></a></li>
   <?php

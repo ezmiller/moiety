@@ -18,10 +18,11 @@ define(["jquery",
 		url: null,
 		path: null,  // will ultimately hold window.location.pathname.split('/');
 		thumbMenu: {
-//			state: {
+			state: {
 //				showByDefault: false,
-//				visibile: false
-//			},
+//				visibile: false,
+				disabled: !(thumbmenuEnabled)
+			},
 			thumbs: {
 				width: 210,
 				height: 133
@@ -36,6 +37,8 @@ define(["jquery",
 	},
 
 	load = function() {
+
+		console.log(this.info.thumbMenu);
 
 		$('.splash-text').animate({
 			opacity: 1
@@ -128,7 +131,10 @@ define(["jquery",
 	layout = function() {
 		var page = this;
 
-		$('.main').css('height', this.info.viewport.height);
+		$('.main').css({
+			'height': this.info.viewport.height,
+			'background-image': $('.main').css('background-image')
+		});
 		$('.main-frame').vAlignInViewport();
 		$('.option.center').find('img').load(function() {
 			$('.main-nav .left, .main-nav .right').css('width', (page.info.viewport.width - $(this).width()) /2);
@@ -444,6 +450,11 @@ define(["jquery",
 
 		// short variable for config object
 		var c = this.info.thumbMenu;
+
+		if ( c.state.disabled == true ) {
+			$('.ctrl.shutter').css('display','none');
+			return;
+		}
 		
 		// check to see if carousel object is set
 		if ( c.carousel.length == 0 ) {

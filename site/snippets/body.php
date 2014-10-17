@@ -16,11 +16,19 @@ if ( $categories_on ) {
 	}
 	$categories = $n;
 }
+$background_url = '';
+$thumbmenu_background_url = '';
+if ( $pages->find('/background')->hasImages() ) {
+	$background_url = $pages->find('/background')->images()->first()->url();
+}
+if ( $pages->find('/thumbmenu-background')->hasImages() ) {
+	$thumbmenu_background_url = $pages->find('/thumbmenu-background')->images()->first()->url();
+}
 ?>
 <div class="container">
 
 	<header>
-		<div id="logo"><a href="">LANNINGSMITH</a></div>
+		<div id="logo"><a href=""><img title="Itsmoiety" src="<?php echo $pages->find('/logo')->images()->first()->url() ?>"/></a></div>
 	</header>
 
 	<?php  if ( $splash_on == true ) : ?>
@@ -43,7 +51,7 @@ if ( $categories_on ) {
 		<?php echo kirbytext($pages->find('/about-us')->text()) ?>
 	</section>
 
-	<section class="main">
+	<section class="main" style="background: url(<?php echo "'". $background_url . "'" ?>)">
 		<nav class="main-nav">
 			<div class="ctrl shutter" title="Open Thumb Menu"></div>
 			<div class="ctrl left" title="Previous Image"><img src="/assets/images/arrow_rightleft.png" alt"left arrow"/></div>
@@ -55,7 +63,7 @@ if ( $categories_on ) {
 		</div>
 	</section>
 
-	<section class="gridnav" >
+	<section class="gridnav" style="background-image: url('<?php echo $thumbmenu_background_url ?>')">
 		<nav class="thumbmenu-nav">
 			<div class="ctrl shutter" title="Close Thumb Menu"></div>
 		</nav>
