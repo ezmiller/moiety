@@ -18,7 +18,7 @@
     <!-- will need to get right for desktop version of this site: <meta name="viewport" content="width=device-width, initial-scale=1">-->
     <meta name="robots" content="index, follow" />
 
-    <?php if($page->text()->value !== ''): ?>
+    <?php if($page->text() !== null): ?>
     <meta name="description" content="<?php echo html($page->text()) ?>" />
     <?php else: ?>
     <meta name="description" content="<?php echo html($site->description()) ?>" />
