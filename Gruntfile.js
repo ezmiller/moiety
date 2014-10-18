@@ -7,8 +7,20 @@ module.exports = function(grunt) {
 		buildConfigMain = grunt.file.readJSON("app.build.js");
 
 	grunt.initConfig({
-		pkg : grunt.file.readJSON('package.json')
+		pkg : grunt.file.readJSON('package.json'),
+		imagemin: {
+			dynamic: {
+				files: [{
+					expand: true,
+					cwd: 'content/',
+					src: ['**/*.{png,jpg,gif}'],
+					dest: '/dist'
+				}]
+			}
+		}
 	});
+
+	grunt.loadNpmTasks('grunt-contrib-imagemin');
 
 	grunt.registerTask(
 	    "build",

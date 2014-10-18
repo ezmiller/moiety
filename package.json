@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "devDependencies": {
     "grunt": "^0.4.4",
+    "grunt-contrib-imagemin": "^0.8.1",
     "requirejs": "^2.1.11"
   },
   "repository": {
