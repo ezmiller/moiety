@@ -1,9 +1,9 @@
 <?php
 
 	/**
-	*	Intercepts the $_SERVER object containing the HTTP request information 
+	*	Intercepts the $_SERVER object containing the HTTP request information
 	*   in order to change it before Kirby loads the site
-	* 
+	*
 	*   Currently it does the following:
 	*      1. Check to see if the REQUEST_URI contains the slug 'category'
 	*      2. If it does not, then it preprends /projects/ to the path.
@@ -12,10 +12,16 @@
 	$base = 'http://'.$_SERVER['HTTP_HOST'];
 	$path = str::split($uri, '/');
 
-//	echo 'uri:';
-//	dump($uri);
-//	echo 'path:';
-//	dump($path);
+	// Generate list of projects
+    $files  = dir::inspect(c::get('root.content').'/01-projects');
+    $projects = $files['children'];
+    $projects = preg_filter(array('/\d+-([a-zA-Z|-]*)/'), array('$1'), $projects);
+
+	// Generate list of existing categories
+	$d = Spyc::YAMLLoad(c::get('root.content') . '/site.txt');
+	$cats = explode(',', $d['Categories']);
+	$cats[] = 'all';
+	$cats = preg_filter(array("/^\s/", "/['|\s]/"), array('', '-'),$cats);
 
 	if ( $uri === '/sitemap' ) {
 		$uri = $uri;
@@ -24,23 +30,33 @@
 		$uri = $uri;
 	}
 	else if ( str::contains($uri, 'category') && !str::contains($uri, '.')) {
-		$GLOBALS['category_name'] = ucwords($path[1]);
-		if ( isset($path[1]) ) {
-			$GLOBALS['category_name'] = $path[1];
-		} else {
-			$GLOBALS['category_name'] = 'all';
+		$c = isset($path[1]) ? urldecode($path[1]) : 'all';
+
+		// If category in path not in list, cause error
+		if ( in_array($c, $cats) ) {
+			$GLOBALS['category_name'] = ucwords(str_replace('-', ' ', $c));
 		}
-		if ( isset($path[2]) ) $GLOBALS['project_name'] = $path[2];
+		else {
+			$GLOBALS['category_name'] = '';
+			go('/error');
+		}
+
+		$p = isset($path[2]) ? urldecode($path[2]) : null;
+		if ( !is_null($p) && in_array($p, $projects) ) {;
+			$GLOBALS['project_name'] = ucwords(str_replace('-', ' ', $p));
+		} elseif ( !is_null($p) && !in_array($p, $projects) ) {
+			$GLOBALS['project_name'] = '';
+			go('/error');
+		}
+
 		$uri = '/category';
 	}
 	else {
 		$GLOBALS['category_name'] = 'all';
-		if ( empty($path) ) {
-			//$uri = '/';
-		} else {
+		if ( !empty($path) ) {
 			$GLOBALS['project_name'] = ucwords($path[0]);
 			$uri = '/projects/'.$path[0];
 		}
 	}
-	 
+
 ?>
