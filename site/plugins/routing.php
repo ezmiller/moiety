@@ -30,9 +30,9 @@
 		$uri = $uri;
 	}
 	else if ( str::contains($uri, 'category') && !str::contains($uri, '.')) {
-		$c = isset($path[1]) ? urldecode($path[1]) : 'all';
 
-		// If category in path not in list, cause error
+		// Check to see if category is exists, otherwise cause error.
+		$c = isset($path[1]) ? urldecode($path[1]) : 'all';
 		if ( in_array($c, $cats) ) {
 			$GLOBALS['category_name'] = ucwords(str_replace('-', ' ', $c));
 		}
@@ -41,6 +41,7 @@
 			go('/error');
 		}
 
+		// Check to see if project exists, otherwise cause error.
 		$p = isset($path[2]) ? urldecode($path[2]) : null;
 		if ( !is_null($p) && in_array($p, $projects) ) {;
 			$GLOBALS['project_name'] = ucwords(str_replace('-', ' ', $p));
@@ -50,11 +51,12 @@
 		}
 
 		$uri = '/category';
+
 	}
 	else {
 		$GLOBALS['category_name'] = 'all';
 		if ( !empty($path) ) {
-			$GLOBALS['project_name'] = ucwords($path[0]);
+			$GLOBALS['project_name'] = ucwords(str_replace('-', ' ',$path[0]));
 			$uri = '/projects/'.$path[0];
 		}
 	}
