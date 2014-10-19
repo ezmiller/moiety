@@ -96,9 +96,6 @@ $action   = action::sortPages($settings->flip);
   
 </div>
 
-<?php snippet('pages.add') ?>
-<?php snippet('pages.delete') ?>
-
 <?php else: ?>
 <div class="subpages">
 

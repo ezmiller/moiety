@@ -37,6 +37,13 @@
 
 <body class="<?php echo $panel->uri->path(1) ?> <?php echo browser::css() ?>">
 
+<?php snippet('pages.add') ?>
+<?php snippet('pages.delete') ?>
+<?php snippet('files.upload') ?>
+<?php snippet('files.edit') ?>
+<?php snippet('files.replace') ?>
+<?php snippet('files.delete') ?>
+
 <div class="menu">
   <h1><a class="home" href="<?php echo url() ?>">Kirby Panel</a></h1>
 
@@ -79,7 +86,7 @@
   <ul class="bar submenu">
     <li><a<?php echo $panel->show == 'content' ?   ' class="active"' : '' ?> href="<?php echo showurl('content') ?>"><?php echo l::get('tabs.content') ?></a></li>  
     <?php 
-      if(($page ->template() == 'image') || ($page->template() == 'splash') || ($page->template() == 'background') || ($page->template() == 'logo'))
+      if(($page ->template() == 'image') || ($page->template() == 'splash'))
       {?>
         <li><a<?php echo $panel->show == 'files'   ?   ' class="active"' : '' ?> href="<?php echo showurl('files') ?>"><?php echo l::get('tabs.files') ?></a></li>
   <?php
