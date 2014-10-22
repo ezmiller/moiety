@@ -19,7 +19,7 @@
 
 	// Generate list of existing categories
 	$d = Spyc::YAMLLoad(c::get('root.content') . '/site.txt');
-	$cats = explode(',', $d['Categories']);
+	$cats = array_key_exists('Categories', $d) ? explode(',', $d['Categories']) : array();
 	$cats[] = 'all';
 	$cats = preg_filter(array("/^\s/", "/['|\s]/"), array('', '-'),$cats);
 
