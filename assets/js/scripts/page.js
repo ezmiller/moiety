@@ -58,7 +58,7 @@ define(["jquery",
 		}, 400);
 
 		if ( this.info.viewport.height <= this.info.viewport.minHeight) {
-			$('.ctrl.up , .ctrl.down').css('background','none');
+			$('.ctrl.up img, .ctrl.down img').hide();
 		}
 
 		this.info.loaded = true;
@@ -75,9 +75,9 @@ define(["jquery",
 		this.initThumbMenu();
 		this.layout();
 		if ( this.info.viewport.height <= this.info.viewport.minHeight) {
-			$('.ctrl.up, .ctrl.down').css('background','none');
+			$('.ctrl.up img, .ctrl.down img').hide();
 		} else {
-			$('.ctrl.up, .ctrl.down').css('background','');
+			$('.ctrl.up img, .ctrl.down img').show();
 		}
 
 	},

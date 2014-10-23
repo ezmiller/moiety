@@ -21,11 +21,8 @@ nav {
 	position: absolute;
 	width: 100%;
 	height: 100%;
-//	min-width: $minViewportWidth;
-//	min-height: $minViewportHeight;
 	top: 0;
 	left: 0;
-	text-align: center;
 }
 
 .ctrl {
@@ -53,7 +50,7 @@ nav {
 }
 
 .thumbmenu-nav .shutter {
-	background: inline-image('x.png') no-repeat;	
+	background: inline-image('x.png') no-repeat;
 	background-position: center;
 }
 
@@ -62,25 +59,34 @@ nav {
 .down {
 	width: 100%;
 	height: 23%;
-	text-align: center;
-	background: inline-image('arrow_updown.png') no-repeat;
+
+	img {
+		position: fixed;
+		left: 50%;
+		margin-left: -31px;
+	}
 }
 
 .up {
 	top: 0;
-	background-position: center top;
+
+	img {
+		top: 0;
+	}
 }
 
 .down {
 	bottom: 0;
-	background-position: center bottom;
+
+	img {
+		bottom: 0;
+	}
 }
 
 .right,
 .left {
 	width: 50%;
 	height: 100%;
-//	background: inline-image('arrow_rightleft.png') no-repeat;
 
 	img{
 		position: fixed;
@@ -88,23 +94,19 @@ nav {
 }
 
 .right {
-
 	right: 0;
-	img { 
-//		right: 13%;
+
+	img {
 		right: 3%;
 	}
-//	background-position: right center;
 }
 
 .left {
 	left: 0;
+
 	img {
-		//float: right;
-//		left: 13%;
 		left: 3%;
 	}
-//	background-position: left center;
 }
 
 
